@@ -3,3 +3,4 @@ node_js:
   - '12'
 os: osx
 script: npm run release
+osx_image: xcode10.2
