@@ -1,6 +1,6 @@
 {
   "name": "covery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An overlay app to demo with phone numbers",
   "main": "index.js",
   "scripts": {
