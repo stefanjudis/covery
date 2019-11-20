@@ -23,3 +23,7 @@ open /Applications/Covery.app --args '{query}'
 ![Screenshots of Alfred settings](./docs/alfred1.png)
 ![Screenshots of Alfred settings](./docs/alfred2.png)
 ![Screenshots of Alfred settings](./docs/alfred3.png)
+
+### Navigate via keyboard
+
+Covery will start centered with a fairly big window size. To move it to the upper right/left corner you can use `CMD+left` or `CMD+right`. To center it again go with `CMD+enter`. :) To close it again focus the app and go with the usual `CMD+q`.
