@@ -253,7 +253,7 @@ try {
   if (!text) {
     return dialog.showErrorBox(
       'Please use covery from the command line',
-      'You can find more info in the docs section at github.com/stefanjudis/covery'
+      "Run it with `open /Applications/Covery.app --args 'THE PHONE NUMBER'`"
     );
   }
 
