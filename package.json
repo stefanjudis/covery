@@ -1,0 +1,39 @@
+{
+  "name": "covery",
+  "version": "1.0.0",
+  "description": "An overlay app to demo with phone numbers",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir -m",
+    "dist": "electron-builder",
+    "release": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanjudis/covery.git"
+  },
+  "build": {
+    "appId": "electron.com.covery",
+    "productName": "Covery",
+    "copyright": "Copyright © 2019 Stefan Judis",
+    "directories": {
+      "output": "release"
+    }
+  },
+  "keywords": [],
+  "author": "stefan judis <stefanjudis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefanjudis/covery/issues"
+  },
+  "homepage": "https://github.com/stefanjudis/covery#readme",
+  "dependencies": {
+    "libphonenumber-js": "^1.7.26",
+    "meow": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron": "^7.1.1",
+    "electron-builder": "^21.2.0"
+  }
+}
