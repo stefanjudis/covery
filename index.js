@@ -10,8 +10,24 @@ const {
 } = require('electron');
 const { parsePhoneNumberFromString } = require('libphonenumber-js');
 
-function createCoveryWindow({ options, text }) {
+function showHelpError() {
+  dialog.showErrorBox(
+    'Please use covery from the command line',
+    [
+      'Run it with:',
+      "  `open /Applications/Covery.app --args 'THE PHONE NUMBER'`"
+    ].join('\n')
+  );
+
+  app.quit();
+}
+
+function createCoveryWindow({ text }) {
   const number = parsePhoneNumberFromString(text);
+
+  if (!number) {
+    return showHelpError();
+  }
 
   const display = screen.getPrimaryDisplay();
 
@@ -248,13 +264,15 @@ function createCoveryWindow({ options, text }) {
 try {
   // run the app like sooo 👇
   // open release/mac/Covery.app --args +49176...
-  const text = process.argv[1];
+  let text = process.argv[1];
   console.log(process.argv, text);
+
   if (!text) {
-    return dialog.showErrorBox(
-      'Please use covery from the command line',
-      "Run it with `open /Applications/Covery.app --args 'THE PHONE NUMBER'`"
-    );
+    return showHelpError();
+  }
+
+  if (!text.startsWith('+')) {
+    text = `+${text}`;
   }
 
   app.on('ready', () => {
