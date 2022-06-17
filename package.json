@@ -33,7 +33,7 @@
     "meow": "^5.0.0"
   },
   "devDependencies": {
-    "electron": "^7.1.1",
+    "electron": "^15.5.5",
     "electron-builder": "^21.2.0"
   }
 }
